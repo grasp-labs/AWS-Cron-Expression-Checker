@@ -12,9 +12,6 @@ A collection of tools for validating AWS cron expressions. This repository provi
 ## Supported Languages
 
 - Python
-- JavaScript/TypeScript
-- Java
-- Go
 - (More coming soon!)
 
 ## Usage
