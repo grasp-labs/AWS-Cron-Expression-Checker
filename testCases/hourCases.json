@@ -1,0 +1,147 @@
+[
+  {
+    "expression": "*",
+    "valid": true,
+    "comment": "All hours"
+  },
+  {
+    "expression": "0",
+    "valid": true,
+    "comment": "At hour 0"
+  },
+  {
+    "expression": "23",
+    "valid": true,
+    "comment": "At hour 23"
+  },
+  {
+    "expression": "24",
+    "valid": false,
+    "comment": "At hour 24 not allowed"
+  },
+  {
+    "expression": "5-10",
+    "valid": true,
+    "comment": "Every Hour Between hour 5 and 10"
+  },
+  {
+    "expression": "20-5",
+    "valid": true,
+    "comment": "AWS cron expressions do allows reverse ranges in hours. 8pm through 5am next day"
+  },
+  {
+    "expression": "24/3",
+    "valid": false,
+    "comment": "Hour 24 not allowed"
+  },
+  {
+    "expression": "0/3",
+    "valid": true,
+    "comment": "Every 3 hours"
+  },
+  {
+    "expression": "*/5",
+    "valid": true,
+    "comment": "Every 5 hours starting at 0 through 20 (0,5,10,15,20)"
+  },
+  {
+    "expression": "3/6",
+    "valid": true,
+    "comment": "Every 6 hours starting at hour 3"
+  },
+  {
+    "expression": "5/0",
+    "valid": false,
+    "comment": "Every 0 hours not allowed"
+  },
+  {
+    "expression": "0,6,12,18",
+    "valid": true,
+    "comment": "List of hours"
+  },
+  {
+    "expression": "0,6,12,24",
+    "valid": false,
+    "comment": "List of hours, 24 not allowed"
+  },
+  {
+    "expression": "0,6,25",
+    "valid": false,
+    "comment": "List of hours, 24+ not allowed"
+  },
+  {
+    "expression": "5-10,20-23",
+    "valid": true,
+    "comment": "Multiple valid ranges in a list"
+  },
+  {
+    "expression": "5-10,8-12",
+    "valid": true,
+    "comment": "Overlapping ranges in a list"
+  },
+  {
+    "expression": "5,5,10",
+    "valid": true,
+    "comment": "Duplicate values in a list"
+  },
+  {
+    "expression": " 5-10 ",
+    "valid": false,
+    "comment": "Spaces around the expression are not allowed"
+  },
+  {
+    "expression": "-1",
+    "valid": false,
+    "comment": "Negative numbers are not allowed"
+  },
+  {
+    "expression": "a,b,c",
+    "valid": false,
+    "comment": "Non-numeric values are not allowed"
+  },
+  {
+    "expression": "5-10/2",
+    "valid": true,
+    "comment": "Step value with a range"
+  },
+  {
+    "expression": "5,,10",
+    "valid": false,
+    "comment": "Empty element in a list is not allowed"
+  },
+  {
+    "expression": ",5,10",
+    "valid": false,
+    "comment": "Leading comma is not allowed"
+  },
+  {
+    "expression": "5,10,",
+    "valid": false,
+    "comment": "Trailing comma is not allowed"
+  },
+  {
+    "expression": "5/2/3",
+    "valid": false,
+    "comment": "Multiple slashes are not allowed"
+  },
+  {
+    "expression": "5.5",
+    "valid": false,
+    "comment": "Decimal values are not allowed"
+  },
+  {
+    "expression": "5#10",
+    "valid": false,
+    "comment": "Special characters are not allowed"
+  },
+  {
+    "expression": "05-10",
+    "valid": false,
+    "comment": "Zero-padded range is not allowed"
+  },
+  {
+    "expression": "",
+    "valid": false,
+    "comment": "Empty string is not allowed"
+  }
+]

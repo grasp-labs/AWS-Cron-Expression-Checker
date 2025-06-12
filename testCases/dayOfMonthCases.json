@@ -1,0 +1,182 @@
+[
+  {
+    "expression": "*",
+    "valid": true,
+    "comment": "Every day"
+  },
+  {
+    "expression": "?",
+    "valid": true,
+    "comment": "No specific value"
+  },
+  {
+    "expression": "1",
+    "valid": true,
+    "comment": "First day of the month"
+  },
+  {
+    "expression": "31",
+    "valid": true,
+    "comment": "Last possible day of the month"
+  },
+  {
+    "expression": "0",
+    "valid": false,
+    "comment": "Day 0 not allowed"
+  },
+  {
+    "expression": "32",
+    "valid": false,
+    "comment": "Day 32 not allowed"
+  },
+  {
+    "expression": "L",
+    "valid": true,
+    "comment": "Last day of the month"
+  },
+  {
+    "expression": "15W",
+    "valid": true,
+    "comment": "Nearest weekday to 15th"
+  },
+  {
+    "expression": "31W",
+    "valid": true,
+    "comment": "Nearest weekday to 31st"
+  },
+  {
+    "expression": "0W",
+    "valid": false,
+    "comment": "0W not allowed"
+  },
+  {
+    "expression": "32W",
+    "valid": false,
+    "comment": "32W not allowed"
+  },
+  {
+    "expression": "1-15",
+    "valid": true,
+    "comment": "Range from 1 to 15"
+  },
+  {
+    "expression": "15-1",
+    "valid": true,
+    "comment": "Reverse range allowed (15th through 1st next month)"
+  },
+  {
+    "expression": "1-32",
+    "valid": false,
+    "comment": "Range exceeding max day"
+  },
+  {
+    "expression": "0-10",
+    "valid": false,
+    "comment": "Range starting at 0 not allowed"
+  },
+  {
+    "expression": "1/5",
+    "valid": true,
+    "comment": "Every 5 days starting at 1"
+  },
+  {
+    "expression": "*/10",
+    "valid": true,
+    "comment": "Every 10 days"
+  },
+  {
+    "expression": "31/2",
+    "valid": true,
+    "comment": "Every 2 days starting at 31"
+  },
+  {
+    "expression": "1,15,31",
+    "valid": true,
+    "comment": "List of days"
+  },
+  {
+    "expression": "1,32",
+    "valid": false,
+    "comment": "List with invalid day"
+  },
+  {
+    "expression": "1,0,15",
+    "valid": false,
+    "comment": "List with 0 not allowed"
+  },
+  {
+    "expression": "1-10,20-25",
+    "valid": true,
+    "comment": "Multiple valid ranges in a list"
+  },
+  {
+    "expression": "1-10,8-15",
+    "valid": true,
+    "comment": "Overlapping ranges in a list"
+  },
+  {
+    "expression": "5,5,10",
+    "valid": true,
+    "comment": "Duplicate values in a list"
+  },
+  {
+    "expression": " 1-10 ",
+    "valid": false,
+    "comment": "Spaces around the expression are not allowed"
+  },
+  {
+    "expression": "-1",
+    "valid": false,
+    "comment": "Negative numbers are not allowed"
+  },
+  {
+    "expression": "a,b,c",
+    "valid": false,
+    "comment": "Non-numeric values are not allowed"
+  },
+  {
+    "expression": "5-10/2",
+    "valid": true,
+    "comment": "Step value with a range"
+  },
+  {
+    "expression": "5,,10",
+    "valid": false,
+    "comment": "Empty element in a list is not allowed"
+  },
+  {
+    "expression": ",5,10",
+    "valid": false,
+    "comment": "Leading comma is not allowed"
+  },
+  {
+    "expression": "5,10,",
+    "valid": false,
+    "comment": "Trailing comma is not allowed"
+  },
+  {
+    "expression": "5/2/3",
+    "valid": false,
+    "comment": "Multiple slashes are not allowed"
+  },
+  {
+    "expression": "5.5",
+    "valid": false,
+    "comment": "Decimal values are not allowed"
+  },
+  {
+    "expression": "5#10",
+    "valid": false,
+    "comment": "Special characters are not allowed"
+  },
+  {
+    "expression": "05-10",
+    "valid": false,
+    "comment": "Zero-padded range is not allowed"
+  },
+  {
+    "expression": "",
+    "valid": false,
+    "comment": "Empty string is not allowed"
+  }
+]

@@ -1,0 +1,152 @@
+[
+  {
+    "expression": "*",
+    "valid": true,
+    "comment": "Every year"
+  },
+  {
+    "expression": "1970",
+    "valid": true,
+    "comment": "Earliest allowed year"
+  },
+  {
+    "expression": "2199",
+    "valid": true,
+    "comment": "Latest allowed year"
+  },
+  {
+    "expression": "1969",
+    "valid": false,
+    "comment": "Year below allowed range"
+  },
+  {
+    "expression": "2200",
+    "valid": false,
+    "comment": "Year above allowed range"
+  },
+  {
+    "expression": "2000-2010",
+    "valid": true,
+    "comment": "Valid range"
+  },
+  {
+    "expression": "2010-2000",
+    "valid": true,
+    "comment": "Reverse range allowed"
+  },
+  {
+    "expression": "1970-2200",
+    "valid": false,
+    "comment": "Range exceeding max year"
+  },
+  {
+    "expression": "1960-1970",
+    "valid": false,
+    "comment": "Range starting below min year"
+  },
+  {
+    "expression": "2000/5",
+    "valid": true,
+    "comment": "Every 5 years starting at 2000"
+  },
+  {
+    "expression": "*/10",
+    "valid": true,
+    "comment": "Every 10 years"
+  },
+  {
+    "expression": "2199/2",
+    "valid": true,
+    "comment": "Every 2 years starting at 2199"
+  },
+  {
+    "expression": "1970,1980,1990",
+    "valid": true,
+    "comment": "List of years"
+  },
+  {
+    "expression": "1970,2200",
+    "valid": false,
+    "comment": "List with invalid year"
+  },
+  {
+    "expression": "1969,1970,1980",
+    "valid": false,
+    "comment": "List with year below allowed"
+  },
+  {
+    "expression": "1970-1980,1990-2000",
+    "valid": true,
+    "comment": "Multiple valid ranges in a list"
+  },
+  {
+    "expression": "1970-1980,1975-1990",
+    "valid": true,
+    "comment": "Overlapping ranges in a list"
+  },
+  {
+    "expression": "2000,2000,2010",
+    "valid": true,
+    "comment": "Duplicate values in a list"
+  },
+  {
+    "expression": " 2000-2010 ",
+    "valid": false,
+    "comment": "Spaces around the expression are not allowed"
+  },
+  {
+    "expression": "-1970",
+    "valid": false,
+    "comment": "Negative numbers are not allowed"
+  },
+  {
+    "expression": "a,b,c",
+    "valid": false,
+    "comment": "Non-numeric values are not allowed"
+  },
+  {
+    "expression": "2000-2010/2",
+    "valid": true,
+    "comment": "Step value with a range"
+  },
+  {
+    "expression": "2000,,2010",
+    "valid": false,
+    "comment": "Empty element in a list is not allowed"
+  },
+  {
+    "expression": ",2000,2010",
+    "valid": false,
+    "comment": "Leading comma is not allowed"
+  },
+  {
+    "expression": "2000,2010,",
+    "valid": false,
+    "comment": "Trailing comma is not allowed"
+  },
+  {
+    "expression": "2000/2/3",
+    "valid": false,
+    "comment": "Multiple slashes are not allowed"
+  },
+  {
+    "expression": "2000.5",
+    "valid": false,
+    "comment": "Decimal values are not allowed"
+  },
+  {
+    "expression": "2000#10",
+    "valid": false,
+    "comment": "Special characters are not allowed"
+  },
+  {
+    "expression": "02000-2010",
+    "valid": false,
+    "comment": "Zero-padded range is not allowed"
+  },
+  {
+    "expression": "",
+    "valid": false,
+    "comment": "Empty string is not allowed"
+  }
+]

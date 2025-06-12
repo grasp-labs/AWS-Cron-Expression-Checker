@@ -1,0 +1,112 @@
+[
+  {
+    "expression": "*",
+    "valid": true,
+    "comment": "All minutes"
+  },
+  {
+    "expression": "0",
+    "valid": true,
+    "comment": "At minute 0"
+  },
+  {
+    "expression": "",
+    "valid": false,
+    "comment": "Empty string not allowed"
+  },
+  {
+    "expression": "05",
+    "valid": true,
+    "comment": "AWS allows a single leading zero for numbers 1 through 9"
+  },
+  {
+    "expression": "010",
+    "valid": false,
+    "comment": "AWS allows a single leading zero for numbers 1 through 9"
+  },
+  {
+    "expression": "005",
+    "valid": false,
+    "comment": "AWS does not allow padded values away from one zero"
+  },
+  {
+    "expression": "59",
+    "valid": true,
+    "comment": "At minute 59"
+  },
+  {
+    "expression": "60",
+    "valid": false,
+    "comment": "At minute 60 not allowed"
+  },
+  {
+    "expression": "5-10",
+    "valid": true,
+    "comment": "Between minute 5 and 10"
+  },
+  {
+    "expression": "55-5",
+    "valid": true,
+    "comment": "AWS allows reverse ranges, executes in order. 55-5 executes at minutes 55 though 59 of the hour and wraps to the next hour for the remaining 5 minutes. (55,56,57,58,59,00,01,02,03,04,05)."
+  },
+  {
+    "expression": "60/15",
+    "valid": false,
+    "comment": "Minute 60 not allowed"
+  },
+  {
+    "expression": "0/15",
+    "valid": true,
+    "comment": "Every 15 minutes"
+  },
+  {
+    "expression": "*/5",
+    "valid": true,
+    "comment": "Every 5 minutes starting at 0 through 55 (5,10,15,...,50,55)"
+  },
+  {
+    "expression": "5/0",
+    "valid": false,
+    "comment": "Every 0 minutes not allowed"
+  },
+  {
+    "expression": ",5",
+    "valid": false,
+    "comment": "Trailing commas not allowed"
+  },
+  {
+    "expression": "5,",
+    "valid": false,
+    "comment": "Empty value after comma not allowed"
+  },
+  {
+    "expression": "0,15,30,45",
+    "valid": true,
+    "comment": "List of minutes"
+  },
+  {
+    "expression": "0,15,30,60",
+    "valid": false,
+    "comment": "List of minutes, 60 not allowed"
+  },
+  {
+    "expression": "0,15,61",
+    "valid": false,
+    "comment": "List of minutes, 60+ not allowed"
+  },
+  {
+    "expression": "5-10,20,30-40/5",
+    "valid": true,
+    "comment": "Mixed true case"
+  },
+  {
+    "expression": "5,10/2",
+    "valid": true,
+    "comment": "Mixed true case"
+  },
+  {
+    "expression": "5,10-15",
+    "valid": true,
+    "comment": "Mixed true case"
+  }
+]

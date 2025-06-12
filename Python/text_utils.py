@@ -47,3 +47,15 @@ def colorize_regex(val) -> str:
         str: The color-formatted string.
     """
     return f"{Style.YELLOW}{val}{Style.RESET}"
+
+def description_color(val) -> str:
+    """
+    Returns the string formatted with the appropriate color.
+
+    Args:
+        val (str): String to colorize.
+
+    Returns:
+        str: The color-formatted string.
+    """
+    return f"{Style.WHITE}{val}{Style.RESET}"

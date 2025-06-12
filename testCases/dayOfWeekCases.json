@@ -1,0 +1,217 @@
+[
+  {
+    "expression": "*",
+    "valid": true,
+    "comment": "Every day of week"
+  },
+  {
+    "expression": "?",
+    "valid": true,
+    "comment": "No specific value"
+  },
+  {
+    "expression": "1",
+    "valid": true,
+    "comment": "Sunday (numeric)"
+  },
+  {
+    "expression": "7",
+    "valid": true,
+    "comment": "Saturday (numeric)"
+  },
+  {
+    "expression": "0",
+    "valid": false,
+    "comment": "Day 0 not allowed"
+  },
+  {
+    "expression": "8",
+    "valid": false,
+    "comment": "Day 8 not allowed"
+  },
+  {
+    "expression": "SUN",
+    "valid": true,
+    "comment": "Sunday by name"
+  },
+  {
+    "expression": "SAT",
+    "valid": true,
+    "comment": "Saturday by name"
+  },
+  {
+    "expression": "SUN-SAT",
+    "valid": true,
+    "comment": "Full range by name"
+  },
+  {
+    "expression": "1-7",
+    "valid": true,
+    "comment": "Full range by number"
+  },
+  {
+    "expression": "7-1",
+    "valid": true,
+    "comment": "Reverse range allowed"
+  },
+  {
+    "expression": "1-8",
+    "valid": false,
+    "comment": "Range exceeding max day"
+  },
+  {
+    "expression": "0-5",
+    "valid": false,
+    "comment": "Range starting at 0 not allowed"
+  },
+  {
+    "expression": "MON-WED",
+    "valid": true,
+    "comment": "Partial range by name"
+  },
+  {
+    "expression": "2/3",
+    "valid": true,
+    "comment": "Every 3 days starting at Monday (2)"
+  },
+  {
+    "expression": "*/4",
+    "valid": false,
+    "comment": "AWS does not allow leading asterisks with a step"
+  },
+  {
+    "expression": "7/2",
+    "valid": true,
+    "comment": "Every 2 days starting at Saturday (7)"
+  },
+  {
+    "expression": "1,3,5",
+    "valid": true,
+    "comment": "List of days by number"
+  },
+  {
+    "expression": "MON,WED,FRI",
+    "valid": true,
+    "comment": "List of days by name"
+  },
+  {
+    "expression": "1,8",
+    "valid": false,
+    "comment": "List with invalid day"
+  },
+  {
+    "expression": "1,0,7",
+    "valid": false,
+    "comment": "List with 0 not allowed"
+  },
+  {
+    "expression": "MON,FOO",
+    "valid": false,
+    "comment": "List with invalid name"
+  },
+  {
+    "expression": "1-3,5-7",
+    "valid": true,
+    "comment": "Multiple valid ranges in a list"
+  },
+  {
+    "expression": "1-3,2-5",
+    "valid": true,
+    "comment": "Overlapping ranges in a list"
+  },
+  {
+    "expression": "5,5,7",
+    "valid": true,
+    "comment": "Duplicate values in a list"
+  },
+  {
+    "expression": " 1-5 ",
+    "valid": false,
+    "comment": "Spaces around the expression are not allowed"
+  },
+  {
+    "expression": "-1",
+    "valid": false,
+    "comment": "Negative numbers are not allowed"
+  },
+  {
+    "expression": "a,b,c",
+    "valid": false,
+    "comment": "Non-numeric, non-name values are not allowed"
+  },
+  {
+    "expression": "5-7/2",
+    "valid": true,
+    "comment": "Step value with a range"
+  },
+  {
+    "expression": "5,,7",
+    "valid": false,
+    "comment": "Empty element in a list is not allowed"
+  },
+  {
+    "expression": ",5,7",
+    "valid": false,
+    "comment": "Leading comma is not allowed"
+  },
+  {
+    "expression": "5,7,",
+    "valid": false,
+    "comment": "Trailing comma is not allowed"
+  },
+  {
+    "expression": "5/2/3",
+    "valid": false,
+    "comment": "Multiple slashes are not allowed"
+  },
+  {
+    "expression": "5.5",
+    "valid": false,
+    "comment": "Decimal values are not allowed"
+  },
+  {
+    "expression": "5#2",
+    "valid": true,
+    "comment": "Second Friday of the month (special # syntax)"
+  },
+  {
+    "expression": "FRI#3",
+    "valid": true,
+    "comment": "Third Friday of the month (special # syntax with name)"
+  },
+  {
+    "expression": "5#6",
+    "valid": false,
+    "comment": "Invalid # occurrence (only 1-5 allowed)"
+  },
+  {
+    "expression": "FRI#0",
+    "valid": false,
+    "comment": "Invalid # occurrence (0 not allowed)"
+  },
+  {
+    "expression": "5L",
+    "valid": true,
+    "comment": "Last Friday of the month (special L syntax)"
+  },
+  {
+    "expression": "FRIL",
+    "valid": true,
+    "comment": "Last Friday of the month (special L syntax with name)"
+  },
+  {
+    "expression": "8L",
+    "valid": false,
+    "comment": "Invalid day with L"
+  },
+  {
+    "expression": "FOOL",
+    "valid": false,
+    "comment": "Invalid name with L"
+  },
+  {
+    "expression": "",
+    "valid": false,
+    "comment": "Empty string is not allowed"
+  }
+]
