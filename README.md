@@ -166,10 +166,6 @@ cron(Minutes Hours Day-of-month Month Day-of-week Year)
 
 Refer to the [AWS documentation](https://docs.aws.amazon.com/AmazonCloudWatch/latest/events/ScheduledEvents.html#CronExpressions) for details.
 
-## Contributing
-
-Contributions for new languages and improvements are welcome! Please open an issue or submit a pull request.
-
 ## License
 
 This project is licensed under the MIT License.
