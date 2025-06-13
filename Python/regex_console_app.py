@@ -109,10 +109,11 @@ def main():
     print("\nWhat would you like to validate?")
     print("1. Minutes")
     print("2. Hours")
-    print("3. Day of Month and Day of Week")
+    print("3. Day of Month")
     print("4. Month")
-    print("5. Year")
-    print("6. Full AWS cron expression")
+    print("5. Day of Week")
+    print("6. Year")
+    print("7. Full AWS cron expression")
 
     choice = input(f"{colorize_question('Choose an option (1-6): ')}").strip()
     print()
@@ -120,13 +121,11 @@ def main():
     match choice:
         case "1": run_tests_for("minutes")
         case "2": run_tests_for("hours")
-        case "3":
-            run_tests_for("day_of_month")
-            print()
-            run_tests_for("day_of_week")
+        case "3": run_tests_for("day_of_month")
         case "4": run_tests_for("month")
-        case "5": run_tests_for("year")
-        case "6": prompt_and_validate_full_cron()
+        case "5": run_tests_for("day_of_week")
+        case "6": run_tests_for("year")
+        case "7": prompt_and_validate_full_cron()
         case _: print("Invalid option. Please enter a number between 1 and 6.")
 
 

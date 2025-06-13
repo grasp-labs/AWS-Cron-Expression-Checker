@@ -178,5 +178,85 @@
     "expression": "",
     "valid": false,
     "comment": "Empty string is not allowed"
+  },
+  {
+    "expression": "jan",
+    "valid": false,
+    "comment": "Lowercase month name not allowed"
+  },
+  {
+    "expression": "Jan",
+    "valid": false,
+    "comment": "Mixed case month name not allowed"
+  },
+  {
+    "expression": "jAn",
+    "valid": false,
+    "comment": "Mixed case month name not allowed"
+  },
+  {
+    "expression": "JAN-12",
+    "valid": false,
+    "comment": "Mixed range of name and number not allowed"
+  },
+  {
+    "expression": "1,JUN",
+    "valid": false,
+    "comment": "Mixed list of number and name not allowed"
+  },
+  {
+    "expression": "1 ",
+    "valid": false,
+    "comment": "Trailing space inside expression not allowed"
+  },
+  {
+    "expression": " JAN",
+    "valid": false,
+    "comment": "Leading space inside expression not allowed"
+  },
+  {
+    "expression": "*/0",
+    "valid": false,
+    "comment": "Step zero is invalid"
+  },
+  {
+    "expression": "1/0",
+    "valid": false,
+    "comment": "Step zero is invalid"
+  },
+  {
+    "expression": "5-10/0",
+    "valid": false,
+    "comment": "Step zero in range is invalid"
+  },
+  {
+    "expression": "*/",
+    "valid": false,
+    "comment": "Missing step value after slash"
+  },
+  {
+    "expression": "5-/2",
+    "valid": false,
+    "comment": "Missing end month in range with step"
+  },
+  {
+    "expression": "*/100",
+    "valid": true,
+    "comment": "Large step value (valid but unusual)"
+  },
+  {
+    "expression": "5-10/a",
+    "valid": false,
+    "comment": "Non-numeric step value"
+  },
+  {
+    "expression": "JAN-APR,6,9/3",
+    "valid": true,
+    "comment": "Comma-separated mixed list of range, number, and step"
+  },
+  {
+    "expression": "1, 6,12",
+    "valid": false,
+    "comment": "Spaces after commas in list are not allowed"
   }
 ]

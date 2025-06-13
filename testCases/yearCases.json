@@ -148,5 +148,91 @@
     "expression": "",
     "valid": false,
     "comment": "Empty string is not allowed"
+  },
+  {
+    "expression": "*/*",
+    "valid": false,
+    "comment": "Invalid: step missing after slash"
+  },
+  {
+    "expression": "1970-1970",
+    "valid": true,
+    "comment": "Valid range with same start and end year"
+  },
+  {
+    "expression": "1970-1970/1",
+    "valid": true,
+    "comment": "Valid single-year range with step"
+  },
+  {
+    "expression": "*/0",
+    "valid": false,
+    "comment": "Invalid step (zero)"
+  },
+  {
+    "expression": "2000/01",
+    "valid": false,
+    "comment": "Leading zero in step"
+  },
+  {
+    "expression": "1970-1980/0",
+    "valid": false,
+    "comment": "Step zero in range"
+  },
+  {
+    "expression": "2000-/5",
+    "valid": false,
+    "comment": "Missing end year in range"
+  },
+  {
+    "expression": "-2000/5",
+    "valid": false,
+    "comment": "Missing start year with step"
+  },
+  {
+    "expression": "1970-1980,,1990",
+    "valid": false,
+    "comment": "Double commas in list"
+  },
+  {
+    "expression": "1970-1980,1990,",
+    "valid": false,
+    "comment": "Trailing comma after list"
+  },
+  {
+    "expression": "1970-1980 ,1990",
+    "valid": false,
+    "comment": "Space inside list elements"
+  },
+  {
+    "expression": "1970, 1980",
+    "valid": false,
+    "comment": "Space after comma"
+  },
+  {
+    "expression": "0",
+    "valid": false,
+    "comment": "Year below allowed range"
+  },
+  {
+    "expression": "* /10",
+    "valid": false,
+    "comment": "Space between * and /"
+  },
+  {
+    "expression": "1970-1980/",
+    "valid": false,
+    "comment": "Trailing slash without step value"
+  },
+  {
+    "expression": "1970-1980/abc",
+    "valid": false,
+    "comment": "Non-numeric step value"
+  },
+  {
+    "expression": "1970-1980/1a",
+    "valid": false,
+    "comment": "Invalid step with trailing characters"
   }
 ]
+
