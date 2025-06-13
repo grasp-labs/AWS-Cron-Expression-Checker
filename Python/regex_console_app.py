@@ -106,7 +106,7 @@ def main():
     """
     Main menu loop to choose field-specific or full cron validation.
     """
-    print("\nWhat would you like to validate?")
+    print("\nWhich Regex would you like to test against?")
     print("1. Minutes")
     print("2. Hours")
     print("3. Day of Month")

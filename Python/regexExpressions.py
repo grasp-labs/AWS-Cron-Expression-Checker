@@ -21,10 +21,11 @@ aws_hour_regex = re.compile(
 )
 
 aws_day_of_month_regex = re.compile(
-    r"^(\*|\?|L|(\*/[1-9]\d*)|([1-9]|[12]\d|3[01])W?|([1-9]|[12]\d|3[01])(-([1-9]|[12]\d|3[01]))?(/([1-9]\d*))?(,([1-9]|[12]\d|3[01])(-([1-9]|[12]\d|3[01]))?(/([1-9]\d*))?)*)$")
+    r"^(\*|\?|L|(\*/[1-9]\d*)|([1-9]|[12]\d|3[01])W?|([1-9]|[12]\d|3[01])(-([1-9]|[12]\d|3[01]))?(/([1-9]\d*))?(,([1-9]|[12]\d|3[01])(-([1-9]|[12]\d|3[01]))?(/([1-9]\d*))?)*)$"
+)
 
 aws_month_regex = re.compile(
-    r"^((\*|\*/([1-9]|1[0-2])|([1-9]|1[0-2])(-([1-9]|1[0-2]))?(/([1-9]|1[0-2]))?(,([1-9]|1[0-2])(-([1-9]|1[0-2]))?(/([1-9]|1[0-2]))?)*)|(\*|\*/([1-9]|1[0-2])|(JAN|FEB|MAR|APR|MAY|JUN|JUL|AUG|SEP|OCT|NOV|DEC)(-(JAN|FEB|MAR|APR|MAY|JUN|JUL|AUG|SEP|OCT|NOV|DEC))?(/([1-9]|1[0-2]))?(,(JAN|FEB|MAR|APR|MAY|JUN|JUL|AUG|SEP|OCT|NOV|DEC)(-(JAN|FEB|MAR|APR|MAY|JUN|JUL|AUG|SEP|OCT|NOV|DEC))?(/([1-9]|1[0-2]))?)*) )$"
+    r"^((\*|\*/([1-9]|1[0-2])|([1-9]|1[0-2])(-([1-9]|1[0-2]))?(/([1-9]|1[0-2]))?(,([1-9]|1[0-2])(-([1-9]|1[0-2]))?(/([1-9]|1[0-2]))?)*)|(JAN|FEB|MAR|APR|MAY|JUN|JUL|AUG|SEP|OCT|NOV|DEC)(-JAN|-FEB|-MAR|-APR|-MAY|-JUN|-JUL|-AUG|-SEP|-OCT|-NOV|-DEC)?(/([1-9]|1[0-2]))?(,(JAN|FEB|MAR|APR|MAY|JUN|JUL|AUG|SEP|OCT|NOV|DEC)(-JAN|-FEB|-MAR|-APR|-MAY|-JUN|-JUL|-AUG|-SEP|-OCT|-NOV|-DEC)?(/([1-9]|1[0-2]))?)*)$"
 )
 
 aws_day_of_week_regex = re.compile(
